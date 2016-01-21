@@ -1,11 +1,16 @@
 @charset 'utf-8';
 
 @import 'settings';
+@import 'lsb-settings';
 @import 'foundation';
 @import 'motion-ui';
+@import 'layout';
+@import 'global';
+@import 'nav';
 
 @include foundation-global-styles;
 @include foundation-grid;
+//@include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;

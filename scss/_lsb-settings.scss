@@ -1,0 +1,13 @@
+$global-font-size: 14px;
+$header-font-size: 16px;
+$article-font-size: 16px;
+
+//$body-font-family: Helvetica, Roboto, Arial, sans-serif;
+$header-font-family: $body-font-family;
+$header-font-weight: $global-weight-bold;
+
+$header-lineheight: 1;
+$header-margin-bottom: 0.5em;
+
+$logo-size: rem-calc(75px);
+$text-max-width: rem-calc(500px);
