@@ -20,7 +20,7 @@ body >main {
     }
   }
 
-   aside {
+  aside {
     margin-top: 3em;
     margin-bottom: 2em;
 
@@ -36,9 +36,10 @@ body >main {
     }
   }
 
-  >nav {
-  background: lightgray;
-  padding: 2rem 1rem;
+  nav.verbose-navigation {
+
+    background: lightgray;
+    padding: 2rem 1rem;
 
     >ul {
       list-style: none !important;
