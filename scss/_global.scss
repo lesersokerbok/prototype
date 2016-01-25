@@ -43,7 +43,7 @@ ul.menu {
   }
 }
 
-button, .call-to-action {
+.call-to-action {
   display: inline-block;
   border: rem-calc(5px) solid $body-font-color !important;
   padding: $button-padding !important;

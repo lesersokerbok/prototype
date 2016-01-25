@@ -7,14 +7,22 @@ body {
   }
 
   >main {
-    >article, >section, >nav {
+    >section, >nav {
       margin: 2rem 0;
     }
   }
 
   >footer {
     >div {
-      margin: 1rem;
+      margin: 1rem 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
 
   }
@@ -32,12 +40,17 @@ body {
       margin-bottom: 0;
     }
 
-    >main, >footer {
-      max-width: rem-calc(750px);
-    }
-
     >main {
       margin-top: 0;
+      max-width: rem-calc(750px);
+
+      article, section {
+        margin: 2rem 0;
+      }
+    }
+
+    >footer {
+      max-width: rem-calc(750px);
     }
   }
 
@@ -47,57 +60,77 @@ body {
     $side-columns: (100-$main-width)/2;
 
     >header {
-      h1, .network-navigation {
+      position: relative;
+
+      h1 {
         width: $side-columns;
       }
-      nav {
+
+      nav#site-navigation {
         width: 100-$side-columns;
         padding-right: $side-columns/2;
-      }
-    }
 
-    >main, >footer {
-      width: $main-width;
+        .network-navigation {
+          position: absolute;
+          width: $side-columns;
+          left: 0;
+          top: $logo-size+1;
+          text-align: center;
+          margin: 0 !important;
+          font-size: rem-calc(14px);
+
+          li {
+            display: block !important;
+
+            a {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
     }
 
     >main {
+      width: $main-width;
       margin-top: 4rem;
-    }
 
-    >header {
-      position: relative;
-    }
-
-    .network-navigation {
-      position: absolute;
-      left: 0;
-      top: $logo-size+1;
-      text-align: center;
-      margin: 0 !important;
-      font-size: rem-calc(14px);
-
-      li {
-        display: block !important;
-
-        a {
-          opacity: 0.5;
-        }
+      article, section {
+        margin: 4rem 0;
       }
+
+      .book-shelf {
+        margin: 0 -20%;
+      }
+    }
+
+    >footer {
+      width: $main-width;
     }
   }
 
   @include breakpoint(xlarge) {
+    $main-width: map-get($main-widths, xlarge);
+    $side-columns: (100-$main-width)/2;
+
     >header {
-      h1, .network-navigation {
-        width: 20%;
+      h1 {
+        width: $side-columns;
       }
-      nav {
-        width: 80%;
+      nav#site-navigation {
+        width: 100-$side-columns;
+
+        .network-navigation {
+          width: $side-columns;
+        }
       }
     }
 
-    >main, >footer {
-      width: 60%;
+    >main {
+      width: $main-width;
+    }
+
+    >footer {
+      width: $main-width;
     }
   }
 }

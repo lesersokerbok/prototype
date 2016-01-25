@@ -1,9 +1,10 @@
 body >main {
 
   section, article {
+
     header {
       max-width: rem-calc($text-max-width*1.50);
-      margin-bottom: 3em;
+      margin-bottom: 2em;
 
       h1 {
         display: none;
@@ -22,8 +23,13 @@ body >main {
         display: block;
       }
     }
-  }
 
+    &:first-child {
+      header {
+        margin-bottom: 4em;
+      }
+    }
+  }
 
   article {
     .article-body {
@@ -93,4 +99,77 @@ body >main {
       }
     }
   }
+
+  section.book-section {
+    white-space: nowrap;
+
+    .book-shelf {
+
+      overflow-x: scroll;
+      overflow-y: hidden;
+      height: 200px;
+
+      .book-cover {
+        height: 200px;
+        display: inline-block;
+
+        img {
+          height: 200px;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  section.blog-section {
+
+    article {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      h1 {
+        @extend h5;
+
+        a {
+          border-bottom: none;
+
+          &:hover {
+            border-bottom: 1px solid $black;
+          }
+        }
+      }
+
+      .article-text {
+        width: 70%;
+        padding-right: 2rem;
+      }
+
+      .featured-image {
+        width: 30%;
+        height: 200px;
+        text-align: center;
+
+        img {
+          display: inline-block;
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+
+      @include breakpoint(small only) {
+        .featured-image, .article-text {
+          width: 100%;
+          height: auto;
+          text-align: left;
+        }
+
+        .featured-image {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+  }
+
 }

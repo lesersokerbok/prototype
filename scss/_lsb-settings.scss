@@ -4,7 +4,7 @@ $header-font-family: $body-font-family;
 $global-weight-bold: bold;
 $header-font-weight: $global-weight-bold;
 
-$header-lineheight: 1;
+$header-lineheight: 1.2;
 $header-margin-bottom: 0.5em;
 
 $text-max-width: 500px;
@@ -18,9 +18,10 @@ $logo-size: 6rem;
 //  xxlarge: 1440px,
 //);
 
-
 $main-widths: (
   large: 66%,
   xlarge: 55%,
-  xxlarge: 55%,
 );
+
+
+$fi-path: '../bower-components/foundation-icon-fonts'
