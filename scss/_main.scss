@@ -1,6 +1,6 @@
 body >main {
 
-  article {
+  section, article {
     header {
       max-width: rem-calc($text-max-width*1.50);
       margin-bottom: 3em;
@@ -9,12 +9,23 @@ body >main {
         display: none;
       }
 
+      a {
+        box-shadow: 0 -0.5em 0 ghostwhite inset;
+
+        &:hover {
+          box-shadow: 0 -0.5em 0 lightgray inset;
+        }
+      }
+
       p {
         @extend h1;
         display: block;
       }
     }
+  }
 
+
+  article {
     .article-body {
       max-width: rem-calc($text-max-width);
     }
@@ -67,6 +78,17 @@ body >main {
           background: $white;
           padding: 1rem;
           margin: 0;
+
+          h1 {
+            @extend h5;
+            a {
+              border-bottom: none;
+
+              &:hover {
+                border-bottom: 1px solid $black;
+              }
+            }
+          }
         }
       }
     }
