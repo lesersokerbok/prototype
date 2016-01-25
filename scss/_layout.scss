@@ -3,46 +3,85 @@ body {
   max-width: map-get($breakpoints, xxlarge) !important;
 
   >header, >main, >footer {
-    padding: 1rem 0;
-    margin: 0 auto;
+    margin: 2rem auto;
+  }
 
-    >header, >nav, >article, >ul, >div {
+  >main, >footer {
+    >article, >nav, >div {
       margin: 1rem 0;
     }
   }
 
-  @include breakpoint(small only) {
+  @include breakpoint(medium down) {
     >header, >main, >footer {
       padding: 1rem;
     }
-  }
 
-  @include breakpoint(medium) {
+    >header {
+      h1 {
+        width: $logo-size;
+      }
+
+      margin-bottom: 0;
+    }
+
     >main, >footer {
-      width: 90%;
+      max-width: rem-calc(750px);
+    }
+
+    >main {
+      margin-top: 0;
     }
   }
 
   @include breakpoint(large) {
 
+    $main-width: map-get($main-widths, large);
+    $side-columns: (100-$main-width)/2;
+
     >header {
-      h1 {
-        width: 15%;
+      h1, .network-navigation {
+        width: $side-columns;
       }
-      nav, >main, >footer {
-        width: 85%;
-        padding-right: 8%;
+      nav {
+        width: 100-$side-columns;
+        padding-right: $side-columns/2;
       }
     }
 
     >main, >footer {
-      width: 70%;
+      width: $main-width;
+    }
+
+    >main {
+      margin-top: 4rem;
+    }
+
+    >header {
+      position: relative;
+    }
+
+    .network-navigation {
+      position: absolute;
+      left: 0;
+      top: $logo-size+1;
+      text-align: center;
+      margin: 0 !important;
+      font-size: rem-calc(14px);
+
+      li {
+        display: block !important;
+
+        a {
+          opacity: 0.5;
+        }
+      }
     }
   }
 
   @include breakpoint(xlarge) {
     >header {
-      h1 {
+      h1, .network-navigation {
         width: 20%;
       }
       nav {

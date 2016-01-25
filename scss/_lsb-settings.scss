@@ -8,11 +8,19 @@ $header-lineheight: 1;
 $header-margin-bottom: 0.5em;
 
 $text-max-width: 500px;
+$logo-size: 6rem;
 
-$breakpoints: (
-  small: 0px,
-  medium: 640px,
-  large: 960px,
-  xlarge: 1200px,
-  xxlarge: 1440px,
+//$breakpoints: (
+//  small: 0px,
+//  medium: 640px,
+//  large: 960px,
+//  xlarge: 1200px,
+//  xxlarge: 1440px,
+//);
+
+
+$main-widths: (
+  large: 66%,
+  xlarge: 55%,
+  xxlarge: 55%,
 );
