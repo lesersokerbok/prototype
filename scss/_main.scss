@@ -1,0 +1,73 @@
+body >main {
+
+  article {
+    header {
+      max-width: rem-calc($text-max-width*1.50);
+      margin-bottom: 3em;
+
+      h1 {
+        display: none;
+      }
+
+      p {
+        @extend h1;
+        display: block;
+      }
+    }
+
+    .article-body {
+      max-width: rem-calc($text-max-width);
+    }
+  }
+
+   aside {
+    margin-top: 3em;
+    margin-bottom: 2em;
+
+    h1 {
+      @extend h5;
+    }
+
+    @include breakpoint(medium) {
+      float: right;
+      text-align: right;
+      margin: 0;
+      padding-left: 1rem;
+    }
+  }
+
+  >nav {
+  background: lightgray;
+  padding: 2rem 1rem;
+
+    >ul {
+      list-style: none !important;
+      margin: 0;
+
+      >li {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+
+        .nav-item-icon {
+          width: rem-calc(150);
+          height: auto;
+          flex-shrink: 0;
+          img {
+            max-width: 100%;
+          }
+        }
+
+        .nav-item-text {
+          max-width: rem-calc($text-max-width);
+          background: $white;
+          padding: 1rem;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

@@ -10,171 +10,150 @@
   <body>
 
     <header>
-      <div class="site-header">
 
-        <div class="header-brand">
-          <a href="#" class="image-link"><img class="logo" src="gfx/lsb-logo.svg" /></a>
-        </div>
+<!--
+      <ul class="menu network-navigation">
+        <li class="current"><a href="#" class="external">Leser søker bok</a></li>
+        <li><a href="#" class="external">Ut av hylla</a></li>
+        <li><a href="#" class="external">Boksøk</a></li>
+      </ul>
+-->
 
-        <div class="nav-toggle">
-          <button data-toggle="navigation">Meny</button>
-        </div>
+      <h1><a href="#">Leser søker bok</a></h1>
+      <button data-toggle="site-navigation">Meny</button>
+      <nav id="site-navigation" data-toggler=".expanded">
 
-      </div>
-      <div class="site-header" id="navigation" data-toggler=".show">
+        <ul class="menu">
+          <li><a href="#">Støtteordninger</a></li>
+          <li><a href="#">Bok til alle-bibliotek</a></li>
+          <li class="current"><a href="#" >Leseombud</a></li>
+          <li><a href="#">Nyheter</a></li>
+        </ul>
+        <ul class="menu">
+          <li class="secondary"><a href="#">Kontakt</a></li>
+          <li class="secondary"><a href="">Om oss</a></li>
+        </ul>
 
-        <nav class="site-nav">
-          <ul>
-            <li><a href="#">Støtteordninger</a></li>
-            <li><a href="#">Bok til alle-bibliotek</a></li>
-            <li class="current"><a href="#" >Leseombud</a></li>
-            <li><a href="#">Nyheter</a></li>
-          </ul>
-          <ul>
-            <li><a href="#">Kontakt</a></li>
-            <li><a href="">Om oss</a></li>
-          </ul>
-        </nav>
+      </nav>
 
-        <nav class="network-nav">
-          <ul>
-            <li class="current"><a href="#" class="external">Leser søker bok</a><span>Vår hjemmeside</span></li>
-            <li><a href="#" class="external">Ut av hylla</a><span>Vår blogg om formidling</span></li>
-            <li><a href="#" class="external">Boksøk</a><span>Bøker for alle</span></li>
-          </ul>
-        </nav>
-
-      </div>
     </header>
     
     <main>
-      <div class="site-main">
-        <article>
-          <header class="article-header">
-            <h1>Leseombud</h1>
-            <p>Leseombud leser høyt for andre og skaper glede i hverdagen.</p>
-          </header>
-          <aside class="article-aside">
-            <nav class="article-nav">
-              <h1>Snarveier</h1>
-              <ul>
-                <li><a href="#">Tips til organisering</a></li>
-                <li><a href="#">Tips til rekruttering</a></li>
-                <li><a href="#">Boktips</a></li>
-              </ul>
-            </nav>
-          </aside>
-          <div class="article-body">
-            <p>Kort fortalt er et leseombud er en person som leser høyt for andre,<br/>
-              som ikke kan lese selv.<br/>
-              Men det å være et leseombud er også så mye mer.<br/>
-              Du er en <a href="#">historieforteller</a> og gledesspreder,<br/>
-              et lyspunkt i hverdagen og en som tar med tilhøreren ut i verden.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Maecenas viverra ipsum aliquam pellentesque interdum.
-              Mauris nec pellentesque libero. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit.
-              Nunc volutpat elementum fermentum.
-              In hac habitasse platea dictumst.
-              Pellentesque vulputate luctus lacus pulvinar pharetra.
-              Nulla sodales justo eu consequat molestie.
-              Pellentesque aliquam dui vel orci ultricies,
-              ac rhoncus est accumsan.
-              Sed vitae bibendum dui, vitae porttitor arcu.
-              Aenean accumsan lobortis lorem, vitae accumsan ante placerat ut.
-            <p><a href="#" class="call-to-action">Meld deg til tjeneste</a>
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes,
-              nascetur ridiculus mus. Pellentesque non metus eros.
-              Phasellus et rhoncus justo.
-              Proin finibus, orci in consectetur ultrices,
-              massa ante facilisis nisl, at porta sem lectus nec sem.
-              Pellentesque ac pretium nisi, sed ornare tortor.
-              Duis commodo posuere odio et mattis.
-              Nunc et velit risus.
-              Aliquam dictum nec nulla eget sagittis.
-              Nunc at metus sit amet lacus suscipit lacinia.
-            </p>
-            <ul>
-              <li>Proin finibus, orci in consectetur ultrices,
-                massa ante facilisis nisl.</li>
-              <li>Duis commodo posuere odio et mattis.</li>
-              <li>Nunc at metus sit amet lacus suscipit lacinia.</li>
+      <article>
+        <header>
+          <h1>Leseombud</h1>
+          <p>Leseombud leser høyt for andre og skaper glede i hverdagen.</p>
+        </header>
+        <aside>
+          <nav>
+            <h1>Snarveier</h1>
+            <ul class="menu">
+              <li><a href="#">Tips til organisering</a></li>
+              <li><a href="#">Tips til rekruttering</a></li>
+              <li><a href="#">Boktips</a></li>
             </ul>
-          </div>
-        </article>
-      </div>
-      <div class="site-main">
-        <nav class="verbose-nav">
+          </nav>
+        </aside>
+        <div class="article-body">
+          <p>Kort fortalt er et leseombud er en person som leser høyt for andre,
+            som ikke kan lese selv.<br/>
+            Men det å være et leseombud er også så mye mer.<br/>
+            Du er en <a href="#">historieforteller</a> og gledesspreder,<br/>
+            et lyspunkt i hverdagen og en som tar med tilhøreren ut i verden.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Maecenas viverra ipsum aliquam pellentesque interdum.
+            Mauris nec pellentesque libero. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit.
+            Nunc volutpat elementum fermentum.
+            In hac habitasse platea dictumst.
+            Pellentesque vulputate luctus lacus pulvinar pharetra.
+            Nulla sodales justo eu consequat molestie.
+            Pellentesque aliquam dui vel orci ultricies,
+            ac rhoncus est accumsan.
+            Sed vitae bibendum dui, vitae porttitor arcu.
+            Aenean accumsan lobortis lorem, vitae accumsan ante placerat ut.
+          <p><a href="#" class="call-to-action">Meld deg til tjeneste</a>
+          <p>Cum sociis natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus. Pellentesque non metus eros.
+            Phasellus et rhoncus justo.
+            Proin finibus, orci in consectetur ultrices,
+            massa ante facilisis nisl, at porta sem lectus nec sem.
+            Pellentesque ac pretium nisi, sed ornare tortor.
+            Duis commodo posuere odio et mattis.
+            Nunc et velit risus.
+            Aliquam dictum nec nulla eget sagittis.
+            Nunc at metus sit amet lacus suscipit lacinia.
+          </p>
           <ul>
-            <li>
-              <div class="nav-item-icon">
-                <img src="gfx/Dyr.png"></img>
-              </div>
-              <div class="nav-item-text">
-                <p>Ønsker du å starte en ny gruppe? <br/>
-                Vi har samlet alt du trenger <a href="#">på et sted</a>.</p>
-              </div>
-            </li>
-            <li>
-              <div class="nav-item-icon">
-                <img src="gfx/Tegneserier.png"></img>
-              </div>
-              <div class="nav-item-text">
-                <p>Hva burde du lese høyt?<br/>
-                Se våre <a href="#">lesetips</a> for <a href="#">eldre</a>, <a href="#">utviklingshemmede</a>, <a href="#">innsatte</a> med fler.</p>
-              </div>
-            </li>
-            <li>
-              <div class="nav-item-icon">
-                <img src="gfx/Krim.png"></img>
-              </div>
-              <div class="nav-item-text">
-                <ul>
-                  <li>Nunc et velit risus</li>
-                  <li>Sed vitae bibendum dui</li>
-                  <li>Aliquam dictum nec nulla eget sagittis. <br/>
-              Nunc at metus sit amet lacus suscipit lacinia.</li>
-                </ul>
-              </div>
-            </li>
+            <li>Proin finibus, orci in consectetur ultrices,
+              massa ante facilisis nisl.</li>
+            <li>Duis commodo posuere odio et mattis.</li>
+            <li>Nunc at metus sit amet lacus suscipit lacinia.</li>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </article>
+      <nav>
+        <ul>
+          <li>
+            <div class="nav-item-icon">
+              <img src="gfx/Dyr.png"></img>
+            </div>
+            <div class="nav-item-text">
+              <p>Ønsker du å starte en ny gruppe? <br/>
+              Vi har samlet alt du trenger <a href="#">på et sted</a>.</p>
+            </div>
+          </li>
+          <li>
+            <div class="nav-item-icon">
+              <img src="gfx/Tegneserier.png"></img>
+            </div>
+            <div class="nav-item-text">
+              <p>Hva burde du lese høyt?<br/>
+              Se våre <a href="#">lesetips</a> for <a href="#">eldre</a>, <a href="#">utviklingshemmede</a>, <a href="#">innsatte</a> med fler.</p>
+            </div>
+          </li>
+          <li>
+            <div class="nav-item-icon">
+              <img src="gfx/Krim.png"></img>
+            </div>
+            <div class="nav-item-text">
+              <ul>
+                <li>Nunc et velit risus</li>
+                <li>Sed vitae bibendum dui</li>
+                <li>Aliquam dictum nec nulla eget sagittis. <br/>
+            Nunc at metus sit amet lacus suscipit lacinia.</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
     </main>
 
     <footer>
-      <div class="site-footer">
-
-        <a href="#" class="image-link"><img class="logo" src="gfx/lsb-logo.svg" /></a>
-
-        <div class="widget">
-          <p>
-            <strong>Leser søker bok</strong><br/>
-            Litteraturhuset<br/>
-            Wergelandsveien 29<br/>
-            0167 OSLO
-          </p>
-        </div>
-        <div class="widget">
-          <p>
-            22 54 75 00<br/>
-            post@lesersokerbok.no<br/>
-            <a href="#">Twitter</a> /
-            <a href="#">Facebook</a> /
-            <a href="#">Instagram</a>
-          </p>
-        </div>
-        <div class="widget">
-          <nav class="footer-nav">
-            <ul>
-              <li><a href="#">Ansatte</a></li>
-              <li><a href="#">Medlemmer</a></li>
-              <li><a href="#">Styret</a></li>
-              <li><a href="#">Vedtekter</a></li>
-            </ul>
-          </nav>
-        </div>
-
+      <div class="widget">
+        <p>
+          <strong>Leser søker bok</strong><br/>
+          Litteraturhuset<br/>
+          Wergelandsveien 29<br/>
+          0167 OSLO
+        </p>
+      </div>
+      <div class="widget">
+        <p>
+          22 54 75 00<br/>
+          post@lesersokerbok.no<br/>
+          <a href="#">Twitter</a> /
+          <a href="#">Facebook</a> /
+          <a href="#">Instagram</a>
+        </p>
+      </div>
+      <div class="widget">
+        <ul class="menu">
+          <li><a href="#">Ansatte</a></li>
+          <li><a href="#">Medlemmer</a></li>
+          <li><a href="#">Styret</a></li>
+          <li><a href="#">Vedtekter</a></li>
+        </ul>
       </div>
     </footer>
 

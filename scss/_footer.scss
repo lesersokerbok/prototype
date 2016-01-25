@@ -1,0 +1,26 @@
+body >footer {
+
+  @include breakpoint(medium) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+
+    .widget {
+      width: 33%;
+      flex-grow: 1;
+      text-align: center;
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .widget:first-child {
+      text-align: left;
+    }
+
+    .widget:last-child {
+      text-align: right;
+    }
+  }
+}

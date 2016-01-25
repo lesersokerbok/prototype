@@ -1,183 +1,74 @@
-$left-bar-column-count: 2;
-$right-bar-column-count: 2;
+body {
 
-// Main layout
+  >header, >main, >footer {
+    padding: 1rem 0;
+    margin: 0 auto;
+    max-width: map-get($breakpoints, xxlarge);
 
-.site-header, .site-main, .site-footer {
-  @include grid-row(12);
-  margin: 1rem auto;
-
-  >div, >nav, >article {
-    @include grid-column(12);
-    margin: 1rem 0;
-  }
-}
-
-.site-header {
-
-  >div {
-    @include grid-column(6);
-    line-height: $logo-size;
-
-    &:last-child {
-      text-align: right;
+    >header, >nav, >article, >ul, >div {
+      margin: 1rem 0;
     }
   }
 
-  &#navigation {
-    display: none;
-    &.show {
-      display: block !important;
+  @include breakpoint(small only) {
+    >header, >main, >footer {
+      padding: 1rem;
     }
   }
 
-}
+  @include breakpoint(medium) {
+    >main, >footer {
+      width: 90%;
+    }
+  }
 
-.site-main {
+  @include breakpoint(large) {
 
-  >nav, >article {
-    @include grid-column(12);
-    margin: 1rem 0;
+    >header {
+      h1 {
+        width: 15%;
+      }
+      nav, >main, >footer {
+        width: 85%;
+        padding-right: 8%;
+      }
+    }
+
+    >main, >footer {
+      width: 70%;
+    }
+  }
+
+  @include breakpoint(xlarge) {
+    >header {
+      h1 {
+        width: 20%;
+      }
+      nav {
+        width: 80%;
+      }
+    }
+
+    >main, >footer {
+      width: 60%;
+    }
   }
 }
 
-.site-footer {
-  position: relative;
-
-  >div {
-    @include grid-column(12);
-    margin: 1rem 0;
-  }
-
-  .logo {
-    position: absolute;
-    top: rem-calc($grid-column-gutter/2);
-    right: rem-calc($grid-column-gutter/2);
-  }
-}
-
-.site-header {
-
-//  .site-nav {
-//    ul {
-//      @include menu-direction(vertical);
-//    }
-//  }
-}
-
-//.page article .page-aside {
-//  @extend .clearfix;
-//  padding: $button-padding;
-//  padding-left: 0;
-//  padding-right: 0;
-//
-//  nav {
-//
-//    h1 {
-//      margin: 0;
-//      line-height: 1.2rem;
-//      float: left;
-//    }
-//
-//    >ul {
-//      @include menu-direction(horizontal);
-//      display: block;
-//      float: left;
-//
-//      li {
-//        display: inline-block;
-//        line-height: 1.2rem;
-//      }
-//    }
+//@include breakpoint(small only) {
+//  body {
+//    background: lightgreen !important;
 //  }
 //}
-
-//@include breakpoint(large) {
 //
-//  // Grid
-//
-//  .site-header, .site-body, .site-footer {
-//    @include grid-row(12);
-//
-//    .header-brand {
-//      @include grid-column($left-bar-column-count);
-//    }
-//
-//    .site-nav {
-//      @include grid-column(12 - $left-bar-column-count);
-//    }
-//
-//    .page, .footer-brand, .footer-widgets {
-//      @include grid-column(12 - $left-bar-column-count - $right-bar-column-count);
-//      @include grid-column-offset($left-bar-column-count);
-//      @include grid-column-end();
-//    }
-//
-//    .site-nav, .page, .footer-brand, .footer-widgets {
-//      padding-left: rem-calc(50px);
-//    }
+//@include breakpoint(medium only) {
+//  body {
+//    background: lightblue !important;
 //  }
+//}
 //
-//  article .page-aside {
-////    @include grid-column($left-bar-column-count);
-//
-//    ul {
-//      @include menu-direction(horizontal);
-//    }
-//  }
-//
-//  // Other layout
-//  .site-header {
-//    padding-top: 2rem;
-//
-//    .header-brand {
-//      text-align: center;
-//    },
-//
-//    .site-nav {
-//
-//      ul {
-//        @include menu-direction(horizontal);
-//      }
-//
-//      >ul {
-//        height: $logo-size;
-//        display: table;
-//
-//
-//        &:first-child {
-//          float: left;
-//          margin-left: -1rem;
-//        }
-//
-//        &:last-child {
-//          float: right;
-//          margin-right: -1rem;
-//        }
-//      }
-//    }
-//  }
-//
-//  .site-body {
-//    position: relative;
-//
-//    .page {
-//      margin-top: -3.5em;
-//
-//      article .page-aside {
-//        position: absolute;
-//        right: 0;
-//        text-align: right;
-//        padding: 0;
-//
-//        h1 {
-//          float: none;
-//        }
-//
-//        nav ul {
-//          @include menu-direction(vertical);
-//        }
-//      }
-//    }
+//@include breakpoint(large only) {
+//  body {
+//    background: lightpink !important;
 //  }
 //}
