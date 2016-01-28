@@ -85,6 +85,10 @@ body {
             a {
               opacity: 0.5;
             }
+
+            &.current a {
+              opacity: 1;
+            }
           }
         }
       }
@@ -98,7 +102,7 @@ body {
         margin: 4rem 0;
       }
 
-      .book-shelf {
+      .book-shelf, .book-archive {
         margin: 0 -20%;
       }
     }
